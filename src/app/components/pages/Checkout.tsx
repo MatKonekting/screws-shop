@@ -21,7 +21,7 @@ export default function Checkout() {
     console.log('POŠILJAM NA BACKEND');
 
     try {
-      const res = await fetch('https://screws-shop.onrender.com', {
+      const res = await fetch('https://screws-shop.onrender.com/order', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
