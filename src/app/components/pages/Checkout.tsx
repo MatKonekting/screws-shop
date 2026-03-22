@@ -21,7 +21,7 @@ export default function Checkout() {
   const API_URL =
     window.location.hostname === 'localhost'
       ? 'http://localhost:5000'
-      : 'https://screws-shop.onrender.com';
+      : 'https://screws-shop.onrender.com/order';
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
