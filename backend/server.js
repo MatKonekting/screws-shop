@@ -26,7 +26,7 @@ io.on('connection', (socket) => {
 });
 
 // ✅ POVEZAVA NA MONGO ATLAS (CLOUD)
-mongoose.connect('mongodb+srv://USERNAME:PASSWORD@screws.vdgo6qw.mongodb.net/ordersDB?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://Matija:Matija123@screws.vdgo6qw.mongodb.net/?appName=Screws')
   .then(() => console.log('MongoDB povezan ☁️'))
   .catch(err => console.error('MongoDB error:', err));
 
