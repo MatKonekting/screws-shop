@@ -25,9 +25,9 @@ io.on('connection', (socket) => {
   console.log('🔌 Client connected:', socket.id);
 });
 
-// ✅ POVEZAVA NA MONGO DATABASE
-mongoose.connect('mongodb://127.0.0.1:27017/ordersDB')
-  .then(() => console.log('MongoDB povezan ✅'))
+// ✅ POVEZAVA NA MONGO ATLAS (CLOUD)
+mongoose.connect('mongodb+srv://USERNAME:PASSWORD@screws.vdgo6qw.mongodb.net/ordersDB?retryWrites=true&w=majority')
+  .then(() => console.log('MongoDB povezan ☁️'))
   .catch(err => console.error('MongoDB error:', err));
 
 // ✅ SCHEMA
