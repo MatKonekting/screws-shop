@@ -7,7 +7,7 @@ import AuthModal from './AuthModal';
 import CartDrawer from './CartDrawer';
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [cartDrawerOpen, setCartDrawerOpen] = useState(false);
 
