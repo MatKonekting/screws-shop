@@ -107,33 +107,16 @@ export default function Header() {
                 )}
               </button>
 
-              {/* MOBILE MENU */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-slate-800 border-t border-slate-700">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => {
-                const isActive = isActiveRoute(item.href);
-
-                return (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className={`block px-3 py-2 rounded-md transition-colors ${
-                      isActive
-                        ? 'bg-orange-500 text-white'
-                        : 'hover:bg-slate-700 text-slate-300'
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
-                );
-              })}
-
-              <div className="border-t border-slate-700 pt-2 mt-2">
-                {user ? (
-                  <div className="space-y-2">
-                    <div className="px-3 py-2 text-sm text-slate-300">
+              <button
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="md:hidden p-2 hover:bg-slate-800 rounded-md"
+              >
+                {mobileMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
+              </button>
 
             </div>
           </div>
