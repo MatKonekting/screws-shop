@@ -107,16 +107,18 @@ export default function Header() {
                 )}
               </button>
 
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 hover:bg-slate-800 rounded-md"
-              >
-                {mobileMenuOpen ? (
-                  <X className="w-6 h-6" />
-                ) : (
-                  <Menu className="w-6 h-6" />
-                )}
-              </button>
+              <Link
+                    key={item.name}
+                    to={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={`block px-3 py-2 rounded-md transition-colors ${
+                      isActive
+                        ? 'bg-orange-500 text-white'
+                        : 'hover:bg-slate-700 text-slate-300'
+                    }`}
+                  >
+                    {item.name}
+                </Link>
 
             </div>
           </div>
