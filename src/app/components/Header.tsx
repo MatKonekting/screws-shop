@@ -108,7 +108,7 @@ export default function Header() {
               </button>
 
               <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                onClick={() => setMobileMenuOpen(true)}
                 className="md:hidden p-2 hover:bg-slate-800 rounded-md"
               >
                 {mobileMenuOpen ? (
